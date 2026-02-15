@@ -1,0 +1,181 @@
+---
+
+  
+
+
+---
+
+<section id="servicios" class="py-14 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-2xl font-bold mb-8">Servicios</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- IZQUIERDA -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+        <!-- Card 1 -->
+        <div class="fade-card bg-white rounded-lg shadow-sm overflow-hidden 
+                    transition-all duration-300 
+                    hover:shadow-xl hover:-translate-y-2">
+
+          <img src="/curso1.jpg" class="h-32 w-full object-cover" />
+
+          <div class="p-4">
+            <h3 class="font-semibold text-sm mb-1">
+              Cursos para Instituciones
+            </h3>
+
+            <p class="text-xs text-gray-600 mb-3">
+              Formación en robótica, electrónica y programación.
+            </p>
+
+            <a 
+              href="/?servicio=cursos#contacto"
+              class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-xs font-medium
+                     transition-all duration-300
+                     hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Solicitar Información →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fade-card bg-white rounded-lg shadow-sm overflow-hidden 
+                    transition-all duration-300 
+                    hover:shadow-xl hover:-translate-y-2">
+
+          <img src="/aulas.jpg" class="h-32 w-full object-cover" />
+
+          <div class="p-4">
+            <h3 class="font-semibold text-sm mb-1">
+              Instalación de Aulas
+            </h3>
+
+            <p class="text-xs text-gray-600 mb-3">
+              Implementación completa de laboratorios tecnológicos.
+            </p>
+
+            <a 
+              href="/?servicio=aulas#contacto"
+              class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-xs font-medium
+                     transition-all duration-300
+                     hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Solicitar Información →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fade-card bg-white rounded-lg shadow-sm overflow-hidden 
+                    transition-all duration-300 
+                    hover:shadow-xl hover:-translate-y-2">
+
+          <img src="/proyectos.jpg" class="h-32 w-full object-cover" />
+
+          <div class="p-4">
+            <h3 class="font-semibold text-sm mb-1">
+              Proyectos Tecnológicos
+            </h3>
+
+            <p class="text-xs text-gray-600 mb-3">
+              Desarrollo de prototipos y automatizaciones.
+            </p>
+
+            <a 
+              href="/?servicio=proyectos#contacto"
+              class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-xs font-medium
+                     transition-all duration-300
+                     hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Solicitar Información →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="fade-card bg-white rounded-lg shadow-sm overflow-hidden 
+                    transition-all duration-300 
+                    hover:shadow-xl hover:-translate-y-2">
+
+          <img src="/kits.jpg" class="h-32 w-full object-cover" />
+
+          <div class="p-4">
+            <h3 class="font-semibold text-sm mb-1">
+              Kits Educativos
+            </h3>
+
+            <p class="text-xs text-gray-600 mb-3">
+              Robots, kits electrónicos y material didáctico.
+            </p>
+
+            <a 
+              href="/?servicio=kits#contacto"
+              class="inline-block border border-blue-600 text-blue-600 px-4 py-2 rounded-md text-xs font-medium
+                     transition-all duration-300
+                     hover:bg-blue-600 hover:text-white hover:-translate-y-1 hover:shadow-lg"
+            >
+              Ver Detalles →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DERECHA -->
+      <div class="fade-card bg-white rounded-lg shadow-sm overflow-hidden 
+                  transition-all duration-300 
+                  hover:shadow-xl">
+
+        <img src="/implementacion.jpg" class="h-55 w-full object-cover" />
+
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-4">
+            ¿Implementar robótica en su institución?
+          </h3>
+
+          <ul class="space-y-2 text-gray-600 text-xs list-disc list-inside mb-6">
+            <li>Aprendizaje avanzado</li>
+            <li>Programas personalizados</li>
+            <li>Robótica competitiva</li>
+            <li>Plataformas completas</li>
+          </ul>
+
+          <a 
+           href="/?servicio=asesoria#contacto"
+            class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium
+                   transition-all duration-300
+                   hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg"
+          >
+            Solicitar Asesoría →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.fade-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 150);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>

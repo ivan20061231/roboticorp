@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Services from "../components/Services.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Roboticorp">
+  <Navbar />
+  <Hero />
+  <Features />
+  <Services />
+  <Projects />
+  <Contact />
+  <Footer />
+</BaseLayout>

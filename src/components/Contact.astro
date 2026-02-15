@@ -1,0 +1,253 @@
+<section id="contacto" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Título -->
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-bold mb-3">Contacto</h2>
+      <p class="text-sm text-gray-600">
+        Solicita información y lleva la robótica a tu institución.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- FORMULARIO -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+
+        <!-- Servicio detectado -->
+        <div id="servicioSeleccionado"
+             class="hidden mb-4 p-3 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-200">
+        </div>
+
+        <!-- Mensaje éxito -->
+        <div id="mensajeExito"
+             class="hidden mb-4 p-3 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-200">
+          ✅ Tu solicitud fue enviada correctamente. Te contactaremos pronto.
+        </div>
+
+        <form id="contactForm" class="space-y-4">
+
+          <div>
+            <label class="text-xs text-gray-600">Nombre</label>
+            <input 
+            name="nombre"
+              type="text" 
+              required
+              class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Nombre completo"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-600">Institución</label>
+            <input 
+            name="institucion"
+              type="text" 
+              class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Nombre de la institución"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-600">Correo electrónico</label>
+            <input 
+            name="email"
+              type="email"
+              required 
+              class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="correo@ejemplo.com"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-600">Servicio de interés</label>
+            <select 
+              id="servicioSelect"
+              name="servicio"
+              class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Seleccionar servicio</option>
+              <option value="cursos">Cursos para instituciones</option>
+              <option value="aulas">Instalación de aulas</option>
+              <option value="proyectos">Proyectos tecnológicos</option>
+              <option value="kits">Kits educativos</option>
+              <option value="asesoria">Asesoría institucional</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-600">Mensaje</label>
+            <textarea 
+            name="mensaje"
+              rows="4"
+              class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Escribe tu mensaje..."
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-md text-sm font-medium
+                   transition-all duration-300
+                   hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg"
+          >
+            Solicitar asesoría →
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- INFORMACIÓN CORPORATIVA -->
+      <div class="rounded-xl p-8 bg-gradient-to-br from-blue-700 to-blue-900 text-white shadow-md flex flex-col justify-between">
+
+        <div>
+          <h3 class="text-xl font-semibold mb-6">
+            Información Corporativa
+          </h3>
+
+          <div class="space-y-5 text-sm">
+
+            <div class="flex items-start gap-3">
+              <span class="text-blue-200">📍</span>
+              <div>
+                <p class="font-medium">Ubicación</p>
+                <p class="text-blue-100 text-xs">Sincelejo, Colombia</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-blue-200">📞</span>
+              <div>
+                <p class="font-medium">Teléfono</p>
+                <p class="text-blue-100 text-xs">+57 300 000 0000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-blue-200">✉</span>
+              <div>
+                <p class="font-medium">Correo</p>
+                <p class="text-blue-100 text-xs">contacto@roboticorp.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-blue-200">🕒</span>
+              <div>
+                <p class="font-medium">Horario</p>
+                <p class="text-blue-100 text-xs">
+                  Lunes a Viernes<br/>
+                  8:00 AM - 5:00 PM
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="mt-8">
+          <a 
+            href="https://wa.me/573000000000?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20de%20Roboticorp"
+            target="_blank"
+            class="block w-full text-center bg-white text-blue-800 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition"
+          >
+            Contactar por WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("contactForm");
+  const mensajeExito = document.getElementById("mensajeExito");
+  const servicioSelect = document.getElementById("servicioSelect");
+  const servicioMensaje = document.getElementById("servicioSeleccionado");
+
+  /* =========================
+     DETECTAR SERVICIO POR URL
+  ========================== */
+  const params = new URLSearchParams(window.location.search);
+  const servicio = params.get("servicio");
+
+  if (servicio && servicioSelect) {
+    servicioSelect.value = servicio;
+
+    if (servicioMensaje && servicioSelect.value !== "") {
+      servicioMensaje.classList.remove("hidden");
+      servicioMensaje.innerText =
+        "Estás solicitando información sobre: " +
+        servicioSelect.options[servicioSelect.selectedIndex].text;
+    }
+  }
+
+  /* =========================
+     CAMBIO MANUAL DEL SELECT
+  ========================== */
+  servicioSelect.addEventListener("change", () => {
+    if (servicioSelect.value !== "") {
+      servicioMensaje.classList.remove("hidden");
+      servicioMensaje.innerText =
+        "Estás solicitando información sobre: " +
+        servicioSelect.options[servicioSelect.selectedIndex].text;
+    } else {
+      servicioMensaje.classList.add("hidden");
+    }
+  });
+
+  /* =========================
+     ENVÍO → WHATSAPP
+  ========================== */
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const boton = form.querySelector("button[type='submit']");
+    boton.disabled = true;
+    boton.innerText = "Redirigiendo...";
+
+    const formData = new FormData(form);
+
+    const nombre = formData.get("nombre");
+    const institucion = formData.get("institucion");
+    const email = formData.get("email");
+    const servicio = formData.get("servicio");
+    const mensaje = formData.get("mensaje");
+
+    const texto = `
+Hola, soy ${nombre}
+Institución: ${institucion || "No especificada"}
+Correo: ${email}
+Servicio: ${servicio}
+
+Mensaje:
+${mensaje || "Sin mensaje"}
+    `;
+
+    const numero = "573023602955"; // 🔥 CAMBIA POR TU NÚMERO REAL
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    mensajeExito.classList.remove("hidden");
+    mensajeExito.innerText = "✅ Redirigiendo a WhatsApp...";
+
+    form.reset();
+    servicioMensaje.classList.add("hidden");
+
+    setTimeout(() => {
+      window.open(url, "_blank");
+      boton.disabled = false;
+      boton.innerText = "Solicitar asesoría →";
+    }, 800);
+  });
+
+});
+</script>
+
